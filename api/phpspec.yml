@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: LemonPeach
+        psr4_prefix: LemonPeach
+        src_path: app
