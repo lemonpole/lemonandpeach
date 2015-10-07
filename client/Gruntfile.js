@@ -4,7 +4,7 @@ module.exports = function(grunt){
     browserify: {
       develop: {
         src: 'js/main.js',
-        dest: 'js/bundle.js',
+        dest: 'bundle.js',
         options: {
           watchifyOptions: {
             'poll': true // for NFS mounts (ie: vagrant)
