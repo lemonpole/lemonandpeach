@@ -3,7 +3,7 @@ module.exports = function(grunt){
     pkg: grunt.file.readJSON('package.json'),
     browserify: {
       develop: {
-        src: 'js/main.js',
+        src: 'js/app.js',
         dest: 'bundle.js',
         options: {
           watchifyOptions: {

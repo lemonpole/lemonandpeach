@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="lemonpeach">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lemon and Peach</title>
 
     <link rel="stylesheet" href="bundle.css" />
+    <link id="api-root" href="http://api.lemonandpeach.us" />
   </head>
-  <body>
-    Yo, wus' good.
+  <body ng-controller="appCtrl">
+    <div id="content" class="animate fader" ng-view></div>
 
-    <script src="js/bundle.js"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
