@@ -9,6 +9,21 @@
     <link id="api-root" href="http://api.lemonandpeach.us" />
   </head>
   <body ng-controller="appCtrl">
+<!--
+Nav drawer should be responsive and only appear on mobile devices.
+On desktops it should appear as a nav bar.
+
+If possible, use media queries to transform content so that the menu is only rendered once.
+-->
+    <nav>
+      <ul>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+        <li><a href="#">Item</a></li>
+      </ul>
+    </nav>
+
     <div id="content" class="animate fader" ng-view></div>
 
     <script src="bundle.js"></script>
