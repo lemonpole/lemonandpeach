@@ -17,7 +17,11 @@
     "font-awesome": "4.3.0",
     "angular": "1.4.7",
     "angular-route": "1.4.7",
-    "angular-animate": "1.4.7"
+    "angular-animate": "1.4.7",
+    "jquery": "2.1.4"
+  },
+  "browser": {
+    "bootstrap": "./node_modules/bootstrap/dist/js/npm.js"
   },
   "scripts": {
     "start": "node -e \"require('grunt').tasks(['start']);\"",

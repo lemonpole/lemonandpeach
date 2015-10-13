@@ -1,4 +1,6 @@
 var angular = require( 'angular' );
+var $ = jQuery = require( 'jquery' );
+var bootstrap = require( 'bootstrap' );
 
 var app = angular.module( 'lemonpeach', [
   require( 'angular-route' ),
