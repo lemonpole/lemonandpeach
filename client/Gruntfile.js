@@ -23,7 +23,7 @@ module.exports = function(grunt){
         }
       }
     },
-    autoPrefixer: {
+    autoprefixer: {
       develop: {
         src: './bundle.css'
       }
@@ -31,7 +31,7 @@ module.exports = function(grunt){
     watch: {
       less: {
         files: ["./less/**/*"],
-        tasks: ["less:develop", "autoPrefixer:develop"]
+        tasks: ["less:develop", "autoprefixer:develop"]
       },
       js: {
         files: ["./js/**/*"],
