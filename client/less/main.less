@@ -1,9 +1,11 @@
 @import '../node_modules/bootstrap/less/bootstrap.less';
+@import '../node_modules/font-awesome/less/font-awesome.less';
 @import 'variables.less';
 @import 'helpers.less';
 
 body {
   background-color: @color-bg;
+  color: @color-lightbg;
 }
 
 nav {
@@ -12,6 +14,9 @@ nav {
   width: 100%; height: @height-nav;
   border-bottom: 1px solid @color-darkbg;
 
+  #bars {
+    display: none;
+  }
   ul {
     height: 100%;
     margin: 0; padding: 0;
@@ -32,6 +37,32 @@ nav {
           background-color: @color-darkbg;
           text-decoration: none;
         }
+      }
+    }
+  }
+}
+
+@media( max-width: @screen-md-min ) {
+  nav {
+    position: absolute; left: -@width-nav;
+    width: @width-nav; height: 100vh;
+    border-bottom:0;
+    border-right: 1px solid @color-darkbg;
+    transition: left 0.3s ease-in-out;
+
+    #bars {
+      position: absolute; left: @width-nav + @mp-medium;
+      display: inline-block;
+      cursor: pointer;
+      color: @color-darkbg;
+    }
+    ul {
+      height: @height-nav;
+      width: 100%;
+
+      li {
+        display: block;
+        width: 100%; min-width: 100%;
       }
     }
   }
