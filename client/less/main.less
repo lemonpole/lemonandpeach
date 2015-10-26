@@ -15,7 +15,14 @@ nav {
   border-bottom: 1px solid @color-darkbg;
 
   #bars {
+    position: fixed; left: 0; top: 0;
     display: none;
+    background-color: @color-lightbg;
+    width: 100%; height: @height-nav;
+    padding-top: @mp-small; padding-left: @mp-small;
+    border-bottom: 1px solid @color-darkbg;
+    color: @color-darkbg;
+    cursor: pointer;
   }
   ul {
     height: 100%;
@@ -44,17 +51,14 @@ nav {
 
 @media( max-width: @screen-md-min ) {
   nav {
-    position: absolute; left: -@width-nav;
+    position: absolute; left: -@width-nav; top: @height-nav;
     width: @width-nav; height: 100vh;
     border-bottom:0;
     border-right: 1px solid @color-darkbg;
     transition: left 0.3s ease-in-out;
 
     #bars {
-      position: absolute; left: @width-nav + @mp-medium;
       display: inline-block;
-      cursor: pointer;
-      color: @color-darkbg;
     }
     ul {
       height: @height-nav;
@@ -63,6 +67,11 @@ nav {
       li {
         display: block;
         width: 100%; min-width: 100%;
+
+        a {
+          border-bottom: 1px solid @color-darkbg;
+          text-align: left;
+        }
       }
     }
   }
