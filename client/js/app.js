@@ -17,6 +17,8 @@ app.config([ '$routeProvider', '$provide', '$animateProvider', function( $routeP
 
   $routeProvider.otherwise({
     redirectTo: '/',
+    templateUrl: 'js/partials/home.html',
+    controller: 'homeCtrl'
   });
 
   $provide.constant( 'apiRoot', apiRootElem.attr( 'href' ) );
