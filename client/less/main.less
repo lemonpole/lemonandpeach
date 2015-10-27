@@ -71,6 +71,18 @@ nav {
 
 #timer {
   text-align: center;
+
+  .timer-item {
+    background-color: @color-darkbg;
+    width: 50%;
+    padding: @mp-medium;
+    border-radius: 6px;
+
+    span {
+      display:block;
+      font-size: 3em;
+    }
+  }
 }
 
 @media( max-width: @screen-md-min ) {
@@ -97,6 +109,13 @@ nav {
           text-align: left;
         }
       }
+    }
+  }
+
+  #timer {
+    .timer-item {
+      width: 100%;
+      padding: 0;
     }
   }
 }
