@@ -10,10 +10,11 @@ html, body, #content {
 body {
   background-color: @color-bg;
   padding-top: @height-nav;
-  color: @color-font;
+  color: @color-fontbase;
 }
 
 nav {
+  z-index: 10;
   position: fixed; top: 0;
   background-color: @color-lightbg;
   width: 100%; height: @height-nav;
@@ -26,7 +27,6 @@ nav {
     width: 100%; height: @height-nav;
     padding-top: @mp-small; padding-left: @mp-small;
     border-bottom: 1px solid @color-darkbg;
-    color: @color-darkbg;
     cursor: pointer;
   }
   ul {
