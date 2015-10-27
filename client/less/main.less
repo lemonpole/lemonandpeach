@@ -10,7 +10,7 @@ html, body, #content {
 body {
   background-color: @color-bg;
   padding-top: @height-nav;
-  color: @color-lightbg;
+  color: @color-font;
 }
 
 nav {
@@ -59,6 +59,18 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   height: @height-mainsplash;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+#married-date {
+  text-align: center;
+}
+
+#timer {
+  text-align: center;
 }
 
 @media( max-width: @screen-md-min ) {
