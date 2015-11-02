@@ -75,9 +75,9 @@ nav {
 
   hr {
     float: left;
-    background-color: @color-darkbg;
     width: 40%;
     margin: 0;
+    border-top: 1px solid @color-darkbg;
   }
   .fa-heart {
     float:left;
@@ -89,10 +89,12 @@ nav {
   text-align: center;
 
   .timer-item {
-    background-color: @color-darkbg;
-    width: 50%;
+    position: relative;
+    width: 50%; height: 0;
     padding: @mp-medium;
-    border-radius: 6px;
+    padding-bottom: 50%;
+    border-radius: 50%;
+    border: 1px solid @color-darkbg;
 
     span {
       display:block;
