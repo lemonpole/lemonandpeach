@@ -45,3 +45,13 @@ app.directive( 'timer', function() {
     }]
   };
 });
+
+app.directive( 'equalHeightToWidth', function(){
+  return {
+    restrict: 'A',
+    link: function( $scope, element, attrs ) {
+     var theWidth = $( element ).outerWidth();
+     $( element ).height( theWidth );
+    }
+  };
+});
