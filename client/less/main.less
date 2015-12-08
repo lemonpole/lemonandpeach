@@ -23,19 +23,21 @@ h1, h2 {
 nav {
   z-index: 10;
   position: fixed; top: 0;
-  background-color: @color-lightbg;
+  background-color: @color-violet;
   width: 100%; height: @height-nav;
-  border-bottom: 1px solid @color-darkbg;
+  border-bottom: 1px solid darken( @color-violet, 20% );
 
   #bars {
     position: fixed; right: 0; top: 0;
     display: none;
-    background-color: @color-lightbg;
+    background-color: @color-violet;
     width: 100%; height: @height-nav;
     padding-top: @mp-small; padding-right: @mp-medium;
-    border-bottom: 1px solid @color-darkbg;
+    border-bottom: 1px solid darken( @color-violet, 20% );
     cursor: pointer;
     text-align: right;
+    color: white;
+    text-shadow: 0px 0px 3px white;
   }
   ul {
     height: 100%;
@@ -52,10 +54,13 @@ nav {
         padding:0 @mp-medium;
         text-align:center;
         line-height: @height-nav;
+        color: white;
+        text-shadow: 0px 0px 3px white;
 
         &:hover {
-          background-color: @color-darkbg;
+          background-color: darken( @color-violet, 20% );
           text-decoration: none;
+          color: white;
         }
       }
     }
@@ -119,7 +124,7 @@ nav {
     position: fixed; right: -@width-nav; top: @height-nav;
     width: @width-nav; height: 100vh;
     border-bottom:0;
-    border-right: 1px solid @color-darkbg;
+    border-right: 1px solid darken( @color-violet, 20% );
     transition: right 0.3s ease-in-out;
 
     #bars {
@@ -134,7 +139,7 @@ nav {
         width: 100%; min-width: 100%;
 
         a {
-          border-bottom: 1px solid @color-darkbg;
+          border-bottom: 1px solid darken( @color-violet, 20% );
           text-align: left;
         }
       }
