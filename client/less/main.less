@@ -1,3 +1,5 @@
+@import url( 'https://fonts.googleapis.com/css?family=Lora:400,700' );
+@import url( 'https://fonts.googleapis.com/css?family=Raleway:400,700' );
 @import '../node_modules/bootstrap/less/bootstrap.less';
 @import '../node_modules/font-awesome/less/font-awesome.less';
 @import 'variables.less';
@@ -11,6 +13,11 @@ body {
   background-color: @color-bg;
   padding-top: @height-nav;
   color: @color-fontbase;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Lora', serif;
 }
 
 nav {
@@ -56,14 +63,12 @@ nav {
 }
 
 #main-splash {
-  background-image: url( 'http://goo.gl/Oqyclz' );
+  background-image: url( 'images/bg_mainsplash.jpg' );
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   height: @height-mainsplash;
-
-  h1 {
-    margin: 0;
-  }
+  box-shadow: inset 0px 0px 50px 0px fade( black, 80% );
 }
 
 #married-date {
@@ -93,7 +98,7 @@ nav {
   .timer-item {
     position: relative;
     border-radius: 50%;
-    border: 1px solid @color-darkbg;
+    border: 2px solid @color-darkbg;
     
     p {
       position: relative;
