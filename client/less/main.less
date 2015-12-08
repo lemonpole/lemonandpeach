@@ -21,13 +21,14 @@ nav {
   border-bottom: 1px solid @color-darkbg;
 
   #bars {
-    position: fixed; left: 0; top: 0;
+    position: fixed; right: 0; top: 0;
     display: none;
     background-color: @color-lightbg;
     width: 100%; height: @height-nav;
-    padding-top: @mp-small; padding-left: @mp-small;
+    padding-top: @mp-small; padding-right: @mp-medium;
     border-bottom: 1px solid @color-darkbg;
     cursor: pointer;
+    text-align: right;
   }
   ul {
     height: 100%;
@@ -110,11 +111,11 @@ nav {
 
 @media( max-width: @screen-md-min ) {
   nav {
-    position: absolute; left: -@width-nav; top: @height-nav;
+    position: fixed; right: -@width-nav; top: @height-nav;
     width: @width-nav; height: 100vh;
     border-bottom:0;
     border-right: 1px solid @color-darkbg;
-    transition: left 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
 
     #bars {
       display: inline-block;

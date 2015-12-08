@@ -7,10 +7,10 @@ app.directive( 'navToggle', function() {
     link: function( $scope, element, attrs ) {
       $( element ).click( function() {
         var navElem = $( 'nav' );
-        var navPosition = navElem.css( 'left' );
+        var navPosition = navElem.css( 'right' );
 
-        if( navPosition != '0px' ) navElem.css( 'left', '0px' );
-        else navElem.css( 'left', '-' + navElem.css( 'width' ) );
+        if( navPosition != '0px' ) navElem.css( 'right', '0px' );
+        else navElem.css( 'right', '-' + navElem.css( 'width' ) );
       });
     }
   };
