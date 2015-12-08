@@ -14,6 +14,7 @@ body {
   padding-top: @height-nav;
   color: @color-fontbase;
   font-family: 'Raleway', sans-serif;
+  font-size: @base-fontsize;
 }
 
 h1, h2 {
@@ -32,30 +33,34 @@ nav {
     display: none;
     background-color: @color-violet;
     width: 100%; height: @height-nav;
-    padding-top: @mp-small; padding-right: @mp-medium;
+    padding-right: @mp-medium;
     border-bottom: 1px solid darken( @color-violet, 20% );
     cursor: pointer;
     text-align: right;
-    color: white;
-    text-shadow: 0px 0px 3px white;
+    color: darken( @color-violet, 20% );;
+    text-shadow: 0px 1px 0px fade( white, 30% );
   }
   ul {
     height: 100%;
     margin: 0; padding: 0;
+    font-size: 0;
 
     li {
       display: inline-block;
       list-style-type: none;
       height: 100%; min-width: @width-nav-item;
+      font-size: @base-fontsize;
 
       a {
         display: block;
+        background-color: inherit;
         height: 100%; width: 100%;
-        padding:0 @mp-medium;
-        text-align:center;
+        padding: 0 @mp-medium;
+        text-align: center;
         line-height: @height-nav;
-        color: white;
-        text-shadow: 0px 0px 3px white;
+        color: darken( @color-violet, 40% );
+        text-shadow: 0px 1px 0px fade( white, 30% );
+        transition: background-color .3s;
 
         &:hover {
           background-color: darken( @color-violet, 20% );
@@ -78,11 +83,18 @@ nav {
 
 #married-date {
   text-align: center;
+
+  h2 {
+    margin-top: 0;
+    font-variant: small-caps;
+    color: lighten( @color-fontbase, 20% );
+  }
 }
 
 #fancy-divider {
   margin-top: @mp-large;
   margin-bottom: @mp-large;
+  color: @color-fontbase;
 
   hr {
     float: left;
@@ -91,8 +103,8 @@ nav {
     border-top: 1px solid @color-darkbg;
   }
   .fa-heart {
-    float:left;
-    width:10%
+    float: left;
+    width: 10%
   }
 }
 
@@ -102,13 +114,13 @@ nav {
 
   .timer-item {
     position: relative;
-    border-radius: 50%;
-    border: 2px solid @color-darkbg;
+    background-color: @color-violet;
+    padding: 10px;
+    color: darken( @color-violet, 20% );
+    text-shadow: 0px 1px 0px fade( white, 30% );
     
     p {
       position: relative;
-      top: 50%;
-      transform: translateY( -50% );
       margin: 0;
       padding: 0;
     }
@@ -123,7 +135,7 @@ nav {
   nav {
     position: fixed; right: -@width-nav; top: @height-nav;
     width: @width-nav; height: 100vh;
-    border-bottom:0;
+    border-bottom: 0;
     border-right: 1px solid darken( @color-violet, 20% );
     transition: right 0.3s ease-in-out;
 
@@ -155,5 +167,12 @@ nav {
         font-size: 2em;
       }
     }
+  }
+
+  #married-date h1 {
+    font-size: 2em;
+  }
+  #married-date h2 {
+    font-size: 1.5em;
   }
 }
