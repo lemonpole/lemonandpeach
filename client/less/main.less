@@ -26,7 +26,8 @@ nav {
   position: fixed; top: 0;
   background-color: @color-violet;
   width: 100%; height: @height-nav;
-  border-bottom: 1px solid darken( @color-violet, 20% );
+  border-bottom: 1px solid darken( @color-violet, 10% );
+  line-height: @height-nav;
 
   #bars {
     position: fixed; right: 0; top: 0;
@@ -34,11 +35,12 @@ nav {
     background-color: @color-violet;
     width: 100%; height: @height-nav;
     padding-right: @mp-medium;
-    border-bottom: 1px solid darken( @color-violet, 20% );
+    border-bottom: 1px solid darken( @color-violet, 10% );
     cursor: pointer;
     text-align: right;
     color: darken( @color-violet, 20% );;
     text-shadow: 0px 1px 0px fade( white, 30% );
+    line-height: @height-nav;
   }
   ul {
     height: 100%;
@@ -58,8 +60,8 @@ nav {
         padding: 0 @mp-medium;
         text-align: center;
         line-height: @height-nav;
-        color: darken( @color-violet, 40% );
-        text-shadow: 0px 1px 0px fade( white, 30% );
+        color: darken( @color-violet, 20% );
+        text-shadow: 0px 1px 0px lighten( @color-violet, 10% );
         transition: background-color .3s;
 
         &:hover {
@@ -117,7 +119,7 @@ nav {
     background-color: @color-violet;
     padding: 10px;
     color: darken( @color-violet, 20% );
-    text-shadow: 0px 1px 0px fade( white, 30% );
+    text-shadow: 0px 1px 0px lighten( @color-violet, 10% );
     
     p {
       position: relative;
@@ -136,7 +138,7 @@ nav {
     position: fixed; right: -@width-nav; top: @height-nav;
     width: @width-nav; height: 100vh;
     border-bottom: 0;
-    border-right: 1px solid darken( @color-violet, 20% );
+    border-left: 1px solid darken( @color-violet, 10% );
     transition: right 0.3s ease-in-out;
 
     #bars {
@@ -151,7 +153,7 @@ nav {
         width: 100%; min-width: 100%;
 
         a {
-          border-bottom: 1px solid darken( @color-violet, 20% );
+          border-bottom: 1px solid darken( @color-violet, 10% );
           text-align: left;
         }
       }
