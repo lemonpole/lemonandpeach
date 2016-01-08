@@ -1,5 +1,6 @@
 class git::install {
-  package{'git':
-    ensure=>present,
+  package { 'git':
+    ensure => present,
+    require => Class[ 'apt::update' ]
   }
 }

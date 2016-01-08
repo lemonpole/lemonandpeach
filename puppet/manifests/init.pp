@@ -1,18 +1,7 @@
-exec { 'apt_update':
-  command => 'apt-get update',
-  path    => '/usr/bin'
+Exec {
+  path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin", "/usr/local/sbin" ]
 }
 
-# set global path variable for project
-# http://www.puppetcookbook.com/posts/set-global-exec-path.html
-Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin", "/usr/local/sbin", "~/.composer/vendor/bin/" ] }
-
 class { 'git::install': }
-class { 'apache2::install': }
-class { 'php5::install': }
-class { 'mysql::install': }
-class { 'phpmyadmin::install': }
-class { 'composer::install': }
-class { 'phpunit::install': }
 class { 'nodejs::install': }
-class { 'laravel::install': }
+class { 'mongodb::install': }

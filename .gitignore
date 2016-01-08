@@ -1,5 +1,9 @@
 # ignore vagrant setup files and misc.
 .vagrant/
+node_modules/
+bower_components/
+src/public/css/
+src/public/js/
 Thumbs.db
 *.log
 *.swp
