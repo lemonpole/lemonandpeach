@@ -27,7 +27,7 @@ var ReactDOM = require( 'react-dom/server' );
 var Router = require( 'react-router' );
 var routes = require( './app/routes' );
 
-app.use( function( req, res ) {
+app.get( '/*', function( req, res ) {
   Router.match({ routes: routes.default, location: req.url }, function( err, redirectLocation, renderProps ) {
     if(err) {
       res.status( 500 ).send( err.message );
