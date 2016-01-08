@@ -1,12 +1,16 @@
 /**
 * global defaults
 */
-html, body, div {
+html, body, .full-height {
   height: 100%;
 }
 body {
+  font-family: 'Raleway', sans-serif;
   font-size: @base-fontsize;
   color: @base-fontcolor;
+}
+h1, h2 {
+  font-family: 'Lora', serif;
 }
 ul {
   margin: 0;
@@ -15,7 +19,7 @@ ul {
 }
 
 /**
-* main styles
+* main nav
 */
 nav {
   .clearfix();
@@ -63,7 +67,7 @@ nav {
   }
 
   hr {
-    background-color: darken( @base-color, 30% );
+    background-color: @base-color;
     width: 25%;
     height: 3px;
     margin: 0;
@@ -72,6 +76,9 @@ nav {
   }
 }
 
+/**
+* home page
+*/
 #splash {
   background-image: url( '../img/bg_mainsplash.jpg' );
   background-size: cover;
@@ -79,4 +86,32 @@ nav {
   background-position: center center;
   height: @h-splash;
   box-shadow: inset 0px 0px 50px 0px fade( black, 80% );
+}
+
+#married-date {
+  text-align: center;
+
+  h2 {
+    margin-top: 0;
+    font-variant: small-caps;
+    color: lighten( @base-fontcolor, 20% );
+  }
+}
+#fancy-divider {
+  .clearfix();
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: @base-fontcolor;
+
+  hr {
+    float: left;
+    width: 45%;
+    margin: 0;
+    border-top: 1px solid @color-brdr-white;
+  }
+
+  .fa-heart {
+    float: left;
+    width: 10%;
+  }
 }
