@@ -1,10 +1,11 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.configure("2") do |config|
+Vagrant.configure( '2' ) do | config |
   # general config
-  config.vm.box = "ubuntu/trusty32"
-  config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network :forwarded_port, guest: 3000, host: 3131
+  config.vm.network :forwarded_port, guest: 27017, host: 27117
   config.vm.network :private_network, ip: '192.168.42.43'
 
   # setup hostmanager
@@ -12,13 +13,10 @@ Vagrant.configure("2") do |config|
   config.hostmanager.manage_host = true
   config.hostmanager.ignore_private_ip = false
   config.hostmanager.include_offline = false
-  config.hostmanager.aliases = %w(lemonandpeach.us api.lemonandpeach.us)
-
-  # allows running commands globally in shell for installed composer libraries
-  config.vm.provision :shell, path: "files/scripts/setup.sh"
+  config.hostmanager.aliases = %w( lemonandpeach.us )
 
   # setup puppet
-  config.vm.provision :puppet do |puppet|
+  config.vm.provision :puppet do | puppet |
     puppet.manifests_path = "puppet/manifests"
     puppet.module_path = "puppet/modules"
     puppet.manifest_file  = "init.pp"
