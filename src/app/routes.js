@@ -1,12 +1,14 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
 import AppCmp from './components/App';
 import HomeCmp from './components/Home/Home';
 import RSVPCmp from './components/RSVP/RSVP';
 
 export default (
-  <Route component={ AppCmp }>
-    <Route path='/' component={ HomeCmp } />
-    <Route path='/rsvp' component={ RSVPCmp } />
-  </Route>
+  <Router>
+    <Route path="/" component={ AppCmp }>
+      <IndexRoute component={ HomeCmp } />
+      <Route path="rsvp" component={ RSVPCmp } />
+    </Route>
+  </Router>
 );
