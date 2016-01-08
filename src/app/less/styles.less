@@ -10,3 +10,61 @@ ul {
   padding: 0;
   list-style-position: inside;
 }
+
+/**
+* main nav
+*/
+nav {
+  .clearfix();
+  height: @h-nav;
+
+  #logo-container, #items-container {
+    float: left;
+  }
+
+  #items-container {
+    height: 100%;
+    margin-left: 20px;
+  }
+
+  #items-container li {
+    float: left;
+    display: table;
+    height: 100%;
+    width: @w-navitem;
+    text-align: center;
+  }
+
+  #items-container li:nth-child( 2 ):hover ~ hr {
+    margin-left: 25%;
+  }
+
+  #items-container li:nth-child( 3 ):hover ~ hr {
+    margin-left: 50%;
+  }
+
+  #items-container li:nth-child( 4 ):hover ~ hr {
+    margin-left: 75%;
+  }
+
+  #items-container a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: @base-fontcolor;
+  }
+
+  #items-container a:hover {
+    background-color: darken( white, 5% );
+    text-decoration: none;
+  }
+
+  hr {
+    background-color: @base-color;
+    width: 25%;
+    height: 2px;
+    margin: 0;
+    border: none;
+    transition: .25s ease-in-out;
+  }
+}
