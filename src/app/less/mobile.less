@@ -1,1 +1,52 @@
-@media( max-width: @screen-xs-max ) { }
+@media( max-width: @screen-xs-max ) {
+  body {
+    padding-top: @h-nav;
+  }
+  nav {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    background-color: @color-nav;
+    width: 100%;
+
+    #bars {
+      float: right;
+      display: table;
+      height: 100%;
+      margin-right: 20px;
+    }
+
+    #bars i.fa {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #items-container {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: -( @w-navmobile );
+      background-color: @color-nav;
+      width: @w-navmobile;
+      height: 100vh;
+      margin-left: 0;
+      padding-top: @h-nav;
+      transition: right .25s;
+    }
+
+    #items-container.toggled {
+      right: 0;
+    }
+
+    #items-container li {
+      float: none;
+      height: @h-navitemmobile;
+      width: 100%;
+      border-bottom: 1px solid @base-color;
+    }
+
+    #items-container hr {
+      display: none;
+    }
+  }
+}
