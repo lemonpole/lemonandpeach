@@ -91,7 +91,7 @@ gulp.task( 'styles', function() {
 });
 
 gulp.task( 'watch', function() {
-  livereload.listen();
+  livereload.listen({ port: 35730 });
   gulp.watch( 'app/**/*.js', [ 'browserify' ] );
   gulp.watch( 'app/less/**/*.less', [ 'styles' ] );
 });
