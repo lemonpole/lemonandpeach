@@ -96,5 +96,5 @@ gulp.task( 'watch', function() {
   gulp.watch( 'app/less/**/*.less', [ 'styles' ] );
 });
 
-gulp.task( 'play', [ 'styles', 'vendor', 'watch' ] );
+gulp.task( 'play', [ 'styles', 'vendor', 'browserify', 'watch' ] );
 gulp.task( 'build', [ 'styles', 'vendor', 'browserify' ] );
