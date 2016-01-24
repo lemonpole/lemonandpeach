@@ -32,7 +32,7 @@ class NavCmp extends React.Component {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/rsvp">RSVP</Link></li>
           <li><Link to="/info">Info</Link></li>
-          <li><Link to="/fund">Honeymoon Fund</Link></li>
+          <li className="last"><Link to="/fund">Honeymoon Fund</Link></li>
           <hr />
         </ul>
       </nav>
