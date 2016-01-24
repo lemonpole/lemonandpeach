@@ -29,10 +29,10 @@ class NavCmp extends React.Component {
         </div>
 
         <ul id="items-container" className={ ( this.state.toggled ) ? 'toggled' : '' }>
-          <li><a href="#">Home</a></li>
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/rsvp">RSVP</Link></li>
-          <li><a href="#">Info</a></li>
-          <li><a href="#">Japan Fund</a></li>
+          <li><Link to="/info">Info</Link></li>
+          <li><Link to="/fund">Honeymoon Fund</Link></li>
           <hr />
         </ul>
       </nav>
