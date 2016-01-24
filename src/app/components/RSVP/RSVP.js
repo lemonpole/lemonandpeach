@@ -27,7 +27,7 @@ class RSVPCmp extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-md-4">
-                <img src="http://placehold.it/350x300" />
+                <img src="http://placehold.it/350x300" className="img-responsive" />
               </div>
 
               <form className="col-md-6">
