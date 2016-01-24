@@ -133,4 +133,43 @@ nav {
     border: 1px solid @base-color;
     border-radius: 0;
   }
+
+  button {
+    border-radius: 0;
+  }
+
+  .btn-going {
+    background-color: @base-color;
+    color: black;
+  }
+
+  .btn-going:hover {
+    background-color: darken( @base-color, 10% );
+  }
+
+  .btn-not-going {
+    background-color: @color-palered;
+    color: white;
+  }
+
+  .btn-not-going:hover {
+    background-color: darken( @color-palered, 10% );
+  }
+
+  .btn-submit {
+    background-color: @color-skyblue;
+    color: black;
+  }
+
+  .btn-submit:hover {
+    background-color: darken( @color-skyblue, 10% );
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
 }
