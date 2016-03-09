@@ -3,43 +3,26 @@
 */
 var colors = require( 'colors' );
 var express = require( 'express' );
-var path = require( 'path' );
-var logger = require( 'morgan' );
-var bodyParser = require( 'body-parser' );
+var vhost = require( 'vhost' );
 var app = express();
 
 app.set( 'port', process.env.PORT || 3131 );
-app.use( logger( 'dev' ) );
-app.use( bodyParser.json() );
-app.use( bodyParser.urlencoded( { extended: false } ) );
-app.use( express.static( path.join( __dirname, 'public' ) ) );
+app.use( vhost( 'lemonandpeach.us', require( './frontend' ) ) );
+app.use( vhost( 'api.lemonandpeach.us', require( './api' ) ) );
 
 app.listen( app.get( 'port' ), function() {
-  console.log( colors.green( 'express server listening on port ' + app.get( 'port' ) ) );
+    console.log( colors.green( 'express server listening on port ' + app.get( 'port' ) ) );
 });
 
 /**
-* Polymorphic ReactJS server setup
+* Database setup
 */
-require( 'babel-core/register' );
-var swig = require( 'swig' );
-var React = require( 'react' );
-var ReactDOM = require( 'react-dom/server' );
-var Router = require( 'react-router' );
-var routes = require( './app/routes' );
+var mongoose = require( 'mongoose' );
 
-app.get( '/*', function( req, res ) {
-  Router.match({ routes: routes.default, location: req.url }, function( err, redirectLocation, renderProps ) {
-    if(err) {
-      res.status( 500 ).send( err.message );
-    } else if( redirectLocation ) {
-      res.status( 302 ).redirect( redirectLocation.pathname + redirectLocation.search );
-    } else if( renderProps ) {
-      var html = ReactDOM.renderToString( React.createElement( Router.RoutingContext, renderProps ) );
-      var page = swig.renderFile( 'views/index.html', { html: html });
-      res.status( 200 ).send( page );
-    } else {
-      res.status( 404 ).send( 'Page Not Found' );
-    }
-  });
+mongoose.connect( process.env.MONGO_URI || 'localhost/nef' );
+mongoose.connection.on( 'open', function() {
+    console.log( colors.green( 'mongoose connected to mongodb successfully' ) );
+});
+mongoose.connection.on( 'error', function() {
+    console.log( colors.red( 'could not connect to mongodb. did you forget to run `mongod`?' ) );
 });
