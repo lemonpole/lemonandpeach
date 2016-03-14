@@ -4,26 +4,23 @@
 
 .validation-result {
   position: absolute;
-  top: 0;
+  top: 15px;
   width: 100%;
-  text-align: left;
 
   & > .result {
     display: none;
     position: absolute;
-    top: 15px;
-    width: 100%;
+    right: 10px;
+    width: auto;
   }
 
   & > .valid {
     display: block;
-    right: -( 100% - 5px );
     color: green;
   }
 
   & > .invalid {
     display: block;
-    right: -( 100% + 2px );
     color: red;
   }
 }

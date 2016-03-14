@@ -68,7 +68,24 @@
     }
   }
 
-  #rsvp form {
-    margin-bottom: 20px;
+  #rsvp {
+    form {
+      margin-bottom: 20px;
+    }
+
+    .validation-result {
+      position: static;
+      width: auto;
+    }
+
+    .validation-result > .invalid {
+      position: static;
+      padding-top: 10px;
+    }
+
+    .validation-result > .valid {
+      position: absolute;
+      top: 15px;
+    }
   }
 }
