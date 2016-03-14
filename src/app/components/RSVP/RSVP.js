@@ -59,14 +59,8 @@ class RSVPCmp extends React.Component {
     return stateObj;
   }
 
-  _onClickGoing( event ) {
-    event.preventDefault();
-    this.setState({ isComing: 'going' });
-  }
-
-  _onClickNotGoing( event ) {
-    event.preventDefault();
-    this.setState({ isComing: 'not going' });
+  _onClickComing( val, evt ) {
+    this.setState({ isComing: val });
   }
 
   _onSubmit( evt ) {
@@ -105,12 +99,12 @@ class RSVPCmp extends React.Component {
 
                 <div className="row">
                   <div className="col-md-6">
-                    <button className="btn btn-going btn-lg btn-block" onClick={ this._onClickGoing.bind( this ) }>
+                    <button className="btn btn-going btn-lg btn-block" onClick={ this._onClickComing.bind( this, 'going' ) }>
                       The fuck yea!
                     </button>
                   </div>
                   <div className="col-md-6">
-                    <button className="btn btn-not-going btn-lg btn-block" onClick={ this._onClickNotGoing.bind( this ) }>
+                    <button className="btn btn-not-going btn-lg btn-block" onClick={ this._onClickComing.bind( this, 'not going' ) }>
                       No, I am a dookiehead!
                     </button>
                   </div>
