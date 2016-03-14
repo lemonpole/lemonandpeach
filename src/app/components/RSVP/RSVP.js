@@ -60,6 +60,7 @@ class RSVPCmp extends React.Component {
   }
 
   _onClickComing( val, evt ) {
+    evt.preventDefault();
     this.setState({ isComing: val });
   }
 
