@@ -5,9 +5,18 @@ var app = express();
 
 var RsvpModel = require( './models/rsvp' ).model;
 
+var allowCrossDomain = function( req, res, next ) {
+  res.header( 'Access-Control-Allow-Origin', 'http://lemonandpeach.us:3131' );
+  res.header( 'Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE' );
+  res.header( 'Access-Control-Allow-Headers', 'Authorization,Content-Type' );
+
+  next();
+}
+
 app.use( logger( 'dev' ) );
 app.use( bodyParser.json() );
 app.use( bodyParser.urlencoded({ extended: false }) );
+app.use( allowCrossDomain );
 
 app.post( '/rsvp', function( req, res ) {
   RsvpModel.findOne({
