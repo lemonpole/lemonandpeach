@@ -26,12 +26,11 @@ app.post( '/rsvp', function( req, res ) {
       return res.status( 400 ).json( err.errmsg );
     }
 
-    return res.json( rsvpObj );
     if( rsvpObj ) {
       return res.status( 400 ).json( "person already rsvp'd" );
     }
 
-    var rsvpObj = new RsvpModel({
+    rsvpObj = new RsvpModel({
       fullname: req.body.fullname,
       plusOne: req.body.plusOne,
       isComing: req.body.isComing

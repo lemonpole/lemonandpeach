@@ -36,6 +36,7 @@ class RSVPCmp extends React.Component {
     stateObj.fullnameValid = ( val.length > 0 );
 
     if( stateObj.fullnameValid ) {
+      stateObj.fullname = val;
       stateObj.formValid = true;
     } else {
       stateObj.formValid = false;
@@ -51,6 +52,7 @@ class RSVPCmp extends React.Component {
     stateObj.plusOneValid = ( val.length > 0 );
 
     if( stateObj.plusOneValid ) {
+      stateObj.plusOne = val;
       stateObj.formValid = true;
     } else {
       stateObj.formValid = false;
@@ -68,7 +70,11 @@ class RSVPCmp extends React.Component {
     evt.preventDefault();
     this.setState({ isLoading: true });
 
-    RSVPActionCreators.sendRSVP( this.state );
+    RSVPActionCreators.sendRSVP( this.state ).then( ( res ) => {
+      this.setState({ isLoading: false });
+    }).catch( ( err ) => {
+      this.setState({ isLoading: false });
+    });
   }
 
   render() {
@@ -136,7 +142,7 @@ class RSVPCmp extends React.Component {
                 </div>
 
                 <button className={ 'btn btn-submit btn-lg btn-block ' + ( !this.state.isComing ? 'hide' : 'show' ) } disabled={ !this.state.formValid || this.state.isLoading }>
-                  Submit
+                  Submit <i className={ 'fa fa-spinner fa-spin ' + ( ( this.state.isLoading ) ? 'show-inline' : 'hidden' ) }></i>
                 </button>
               </form>
             </div>

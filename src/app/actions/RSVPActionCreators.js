@@ -3,12 +3,14 @@ import AppConstants from '../constants/AppConstants';
 
 export default class RSVPActionCreators {
   static sendRSVP( data ) {
-    Request.post( AppConstants.API_ROOT + '/rsvp' ).end( ( err, res ) => {
-      if( err ) {
-        // something wrong
-      } else {
-        // everything is okay
-      }
+    return new Promise( ( resolve, reject ) => {
+      Request.post( AppConstants.API_ROOT + '/rsvp' ).send( data ).end( ( err, res ) => {
+        if( err ) {
+          reject( ( res && res.body ) ? res.body : err );
+        } else {
+          resolve( res );
+        }
+      });
     });
   }
 }
