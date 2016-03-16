@@ -11,6 +11,7 @@ class RSVPCmp extends React.Component {
       isLoading: false,
       formValid: false,
       formInvalidMsg: undefined,
+      formSubmitted: false,
       fullnamePristine: true,
       fullnameValid: false,
       fullname: undefined,
@@ -71,7 +72,7 @@ class RSVPCmp extends React.Component {
     this.setState({ isLoading: true });
 
     RSVPActionCreators.sendRSVP( this.state ).then( ( res ) => {
-      this.setState({ isLoading: false });
+      this.setState({ isLoading: false, formSubmitted: true });
     }).catch( ( err ) => {
       this.setState({ isLoading: false });
     });
@@ -84,10 +85,10 @@ class RSVPCmp extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-md-4">
-                <img src="http://placehold.it/350x300" className="img-responsive" />
+                <img src="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-343611.jpg" className="rsvp-img img-responsive" />
               </div>
 
-              <form className="col-md-6" onSubmit={ this._onSubmit.bind( this ) }>
+              <form className={ 'col-md-6 ' + ( this.state.formSubmitted ? 'hide' : 'show' ) } onSubmit={ this._onSubmit.bind( this ) }>
                 <h2>Tell us if you're coming!</h2>
 
                 <div className="form-group has-validation">
@@ -145,6 +146,11 @@ class RSVPCmp extends React.Component {
                   Submit <i className={ 'fa fa-spinner fa-spin ' + ( ( this.state.isLoading ) ? 'show-inline' : 'hidden' ) }></i>
                 </button>
               </form>
+
+              <div className={ 'col-md-6 ' + ( this.state.formSubmitted ? 'show' : 'hide' ) }>
+                <h2>RSVP Received!</h2>
+                <h3>For wedding information and the such visit <Link to="info">our info page</Link>!</h3>
+              </div>
             </div>
           </div>
         </div>
