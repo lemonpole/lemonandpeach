@@ -5,8 +5,8 @@ import NavCmp from '../Common/Nav';
 import RSVPActionCreators from '../../actions/RSVPActionCreators';
 
 class RSVPCmp extends React.Component {
-  constructor() {
-    super();
+  constructor( props ) {
+    super( props );
     this.state = {
       isLoading: false,
       formValid: false,
@@ -86,7 +86,7 @@ class RSVPCmp extends React.Component {
   render() {
     return (
         <div id="rsvp">
-          <NavCmp />
+          <NavCmp location={ this.props.location } />
           <div className="container">
             <div className="row">
               <div className="col-md-4">

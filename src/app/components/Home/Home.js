@@ -3,10 +3,14 @@ import NavCmp from '../Common/Nav';
 import SplashCmp from './Splash';
 
 class HomeCmp extends React.Component {
+  constructor( props ) {
+    super( props );
+  }
+
   render() {
     return (
       <div className="full-height">
-        <NavCmp />
+        <NavCmp location={ this.props.location } />
         <SplashCmp />
 
         <div id="married-date" className="container">

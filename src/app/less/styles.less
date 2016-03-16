@@ -45,7 +45,11 @@ nav {
     text-align: center;
   }
 
-  #items-container li:nth-child( 2 ):hover ~ hr {
+  #items-container li:nth-child( 1 ):hover ~ hr, #items-container li.activenav-home ~ hr {
+    margin-left: 0;
+  }
+
+  #items-container li:nth-child( 2 ):hover ~ hr, #items-container li.activenav-rsvp ~ hr {
     margin-left: 25%;
   }
 
