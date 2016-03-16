@@ -10,7 +10,7 @@ class RSVPCmp extends React.Component {
     this.state = {
       isLoading: false,
       formValid: false,
-      formInvalidMsg: undefined,
+      formInvalidMsg: false,
       formSubmitted: false,
       fullnamePristine: true,
       fullnameValid: false,
@@ -74,8 +74,13 @@ class RSVPCmp extends React.Component {
     RSVPActionCreators.sendRSVP( this.state ).then( ( res ) => {
       this.setState({ isLoading: false, formSubmitted: true });
     }).catch( ( err ) => {
-      this.setState({ isLoading: false });
+      this.setState({ isLoading: false, formInvalidMsg: err });
     });
+  }
+
+  _dismissAlert( evt ) {
+    evt.preventDefault();
+    this.setState({ formInvalidMsg: false });
   }
 
   render() {
@@ -89,6 +94,11 @@ class RSVPCmp extends React.Component {
               </div>
 
               <form className={ 'col-md-6 ' + ( this.state.formSubmitted ? 'hide' : 'show' ) } onSubmit={ this._onSubmit.bind( this ) }>
+                <div className={ 'alert alert-warning alert-dismissible ' + ( this.state.formInvalidMsg ? 'show' : 'hidden' ) } role="alert">
+                  <button className="close" onClick={ this._dismissAlert.bind( this ) }><span aria-hidden="true">&times;</span></button>
+                  <strong>Warning!</strong> { this.state.formInvalidMsg }
+                </div>
+
                 <h2>Tell us if you're coming!</h2>
 
                 <div className="form-group has-validation">
