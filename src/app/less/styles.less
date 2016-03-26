@@ -162,23 +162,23 @@ nav {
     cursor: not-allowed;
   }
 
-  .btn-going {
+  .btn-going, .btn-going:disabled:hover {
     background-color: @base-color;
     border: 1px solid darken( @base-color, 10% );
     color: black;
   }
 
-  .btn-going:hover, .btn-active {
+  .btn-going:hover, .btn-going.btn-active {
     background-color: darken( @base-color, 10% );
   }
 
-  .btn-not-going {
+  .btn-not-going, .btn-not-going:disabled:hover {
     background-color: @color-palered;
     border: 1px solid darken( @color-palered, 10% );
     color: white;
   }
 
-  .btn-not-going:hover, .btn-active {
+  .btn-not-going:hover, .btn-not-going.btn-active {
     background-color: darken( @color-palered, 10% );
   }
 
