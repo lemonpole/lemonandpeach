@@ -13,7 +13,10 @@
     "watch": "nodemon server.js"
   },
   "babel": {
-    "presets": [ "es2015", "react" ]
+    "presets": [
+      "es2015",
+      "react"
+    ]
   },
   "dependencies": {
     "async": "^1.5.0",
@@ -28,8 +31,11 @@
     "react-dom": "^0.14.2",
     "react-router": "^1.0.0",
     "socket.io": "^1.3.7",
+    "superagent": "^1.8.1",
     "swig": "^1.4.2",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "validator": "^5.1.0",
+    "vhost": "^3.0.2"
   },
   "devDependencies": {
     "babel-loader": "^6.1.0",

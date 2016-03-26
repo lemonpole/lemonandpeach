@@ -1,12 +1,202 @@
 /**
 * global defaults
 */
+html, body, .full-height {
+  height: 100%;
+}
 body {
+  font-family: 'Raleway', sans-serif;
   font-size: @base-fontsize;
   color: @base-fontcolor;
+}
+h1, h2 {
+  font-family: 'Lora', serif;
 }
 ul {
   margin: 0;
   padding: 0;
   list-style-position: inside;
+}
+
+/**
+* main nav
+*/
+nav {
+  .clearfix();
+  height: @h-nav;
+
+  #bars {
+    display: none;
+  }
+  #logo-container, #items-container {
+    float: left;
+  }
+
+  #items-container {
+    height: @h-nav - 3px;
+    margin-left: 20px;
+  }
+
+  #items-container li {
+    float: left;
+    display: table;
+    height: 100%;
+    width: @w-navitem;
+    text-align: center;
+  }
+
+  #items-container li:nth-child( 1 ):hover ~ hr, #items-container li.activenav-home ~ hr {
+    margin-left: 0;
+  }
+
+  #items-container li:nth-child( 2 ):hover ~ hr, #items-container li.activenav-rsvp ~ hr {
+    margin-left: 25%;
+  }
+
+  #items-container li:nth-child( 3 ):hover ~ hr {
+    margin-left: 50%;
+  }
+
+  #items-container li:nth-child( 4 ):hover ~ hr {
+    margin-left: 75%;
+  }
+
+  #items-container li.last {
+    display: none;
+  }
+
+  #items-container a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: @base-fontcolor;
+  }
+
+  #items-container a:hover {
+    background-color: darken( white, 5% );
+    text-decoration: none;
+  }
+
+  hr {
+    background-color: @base-color;
+    width: 25%;
+    height: 3px;
+    margin: 0;
+    border: none;
+    transition: .25s ease-in-out;
+  }
+}
+
+/**
+* home page
+*/
+#splash {
+  background-image: url( '../img/bg_mainsplash.jpg' );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: @h-splash;
+  box-shadow: inset 0px 0px 50px 0px fade( black, 80% );
+}
+
+#married-date {
+  text-align: center;
+
+  h2 {
+    margin-top: 0;
+    font-variant: small-caps;
+    color: lighten( @base-fontcolor, 20% );
+  }
+}
+#fancy-divider {
+  .clearfix();
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: @base-fontcolor;
+
+  hr {
+    float: left;
+    width: 45%;
+    margin: 0;
+    border-top: 1px solid @color-brdr-white;
+  }
+
+  .fa-heart {
+    float: left;
+    width: 10%;
+  }
+}
+
+/**
+* RSVP
+*/
+#rsvp {
+  .container {
+    padding-top: 20px;
+  }
+
+  form {
+    margin-bottom: 20px;
+  }
+
+  input {
+    height: auto;
+    padding: 15px;
+    border: 1px solid @base-color;
+    border-radius: 0;
+  }
+
+  button {
+    border-radius: 0;
+  }
+
+  .rsvp-img {
+    border: 1px solid @base-fontcolor;
+  }
+
+  .alert {
+    border-radius: 0;
+  }
+
+  .btn-active {
+    cursor: not-allowed;
+  }
+
+  .btn-going, .btn-going:disabled:hover {
+    background-color: @base-color;
+    border: 1px solid darken( @base-color, 10% );
+    color: black;
+  }
+
+  .btn-going:hover, .btn-going.btn-active {
+    background-color: darken( @base-color, 10% );
+  }
+
+  .btn-not-going, .btn-not-going:disabled:hover {
+    background-color: @color-palered;
+    border: 1px solid darken( @color-palered, 10% );
+    color: white;
+  }
+
+  .btn-not-going:hover, .btn-not-going.btn-active {
+    background-color: darken( @color-palered, 10% );
+  }
+
+  .btn-submit {
+    background-color: @color-skyblue;
+    border: 1px solid darken( @color-skyblue, 10% );
+    color: black;
+  }
+
+  .btn-submit:hover {
+    background-color: darken( @color-skyblue, 10% );
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
 }

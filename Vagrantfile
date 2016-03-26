@@ -13,7 +13,7 @@ Vagrant.configure( '2' ) do | config |
   config.hostmanager.manage_host = true
   config.hostmanager.ignore_private_ip = false
   config.hostmanager.include_offline = false
-  config.hostmanager.aliases = %w( lemonandpeach.us )
+  config.hostmanager.aliases = %w( lemonandpeach.us api.lemonandpeach.us )
 
   # setup puppet
   config.vm.provision :puppet do | puppet |

@@ -3,7 +3,7 @@ import React from 'react';
 class AppCmp extends React.Component {
   render() {
     return (
-      <div>
+      <div className="full-height">
         { this.props.children }
       </div>
     );

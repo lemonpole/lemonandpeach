@@ -1,0 +1,30 @@
+.show-inline {
+  display: inline-block !important;
+}
+
+.has-validation {
+  position: relative;
+}
+
+.validation-result {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+
+  & > .result {
+    display: none;
+    position: absolute;
+    right: 10px;
+    width: auto;
+  }
+
+  & > .valid {
+    display: block;
+    color: green;
+  }
+
+  & > .invalid {
+    display: block;
+    color: red;
+  }
+}
