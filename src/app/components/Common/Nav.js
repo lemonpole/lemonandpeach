@@ -23,7 +23,7 @@ class NavCmp extends React.Component {
         </div>
 
         <div id="logo-container">
-          <div className="logo"></div>
+          <div className="logo"><Link to="/">Home</Link></div>
         </div>
 
         <ul id="items-container" className={ ( this.state.toggled ) ? 'toggled' : '' }>
