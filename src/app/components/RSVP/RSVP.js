@@ -91,7 +91,7 @@ class RSVPCmp extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-md-4">
-                <img src="http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-343611.jpg" className="rsvp-img img-responsive" />
+                <img src="img/rsvp.jpg" className="rsvp-img img-responsive" />
               </div>
 
               <form className={ 'col-md-6 ' + ( this.state.formSubmitted ? 'hide' : 'show' ) } onSubmit={ this._onSubmit.bind( this ) }>

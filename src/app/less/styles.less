@@ -24,17 +24,31 @@ ul {
 nav {
   .clearfix();
   height: @h-nav;
+  box-shadow: 0 6px 4px -4px fade( black, 10% );
 
   #bars {
     display: none;
   }
+
   #logo-container, #items-container {
     float: left;
   }
 
+  #logo-container {
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+
+  #logo-container .logo {
+    background-image: url( '../img/logo.png' );
+    background-repeat: no-repeat;
+    background-size: auto ( @h-nav - 10 );
+    width: 100px;
+    height: @h-nav - 10;
+  }
+
   #items-container {
     height: @h-nav - 3px;
-    margin-left: 20px;
   }
 
   #items-container li {
