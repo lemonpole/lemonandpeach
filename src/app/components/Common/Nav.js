@@ -29,7 +29,7 @@ class NavCmp extends React.Component {
         <ul id="items-container" className={ ( this.state.toggled ) ? 'toggled' : '' }>
           <li className={ ( this.state.pathname == '/' ) ? 'activenav-home' : '' }><Link to="/">Home</Link></li>
           <li className={ ( this.state.pathname == '/rsvp' ) ? 'activenav-rsvp' : '' }><Link to="/rsvp">RSVP</Link></li>
-          <li><Link to="/info">Info</Link></li>
+          <li className={ ( this.state.pathname == '/info' ) ? 'activenav-info' : '' }><Link to="/info">Info</Link></li>
           <li><Link to="/fund">Honeymoon Fund</Link></li>
           <li className="last">&nbsp;</li>
           <hr />
