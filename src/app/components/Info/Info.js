@@ -18,7 +18,7 @@ class InfoCmp extends React.Component {
         <NavCmp location={ this.props.location } />
 
         <div className="container">
-          <section className="row">
+          <section className="row location">
             <div className="col-md-12">
               <h2>Location</h2>
               <MapCmp className="google-map" address={ ADDRESS } defaultZoom={ DEFAULT_ZOOM }>
@@ -40,6 +40,17 @@ class InfoCmp extends React.Component {
               <h2>Parking</h2>
               <p>Parking will be provided by <b>SO AND SO</b></p>
               <p>For more information visit their website or call: 215-133-3337.</p>
+            </div>
+          </section>
+
+          <section className="row">
+            <FancyDividerCmp className="col-md-12" />
+          </section>
+
+          <section className="row">
+            <div className="col-md-12">
+              <h2>Some Other</h2>
+              <p>Info Info Info</p>
             </div>
           </section>
         </div>
