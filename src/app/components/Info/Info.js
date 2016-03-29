@@ -21,13 +21,15 @@ class InfoCmp extends React.Component {
           <section className="row location">
             <div className="col-md-12">
               <h2>Location</h2>
-              <MapCmp className="google-map" address={ ADDRESS } defaultZoom={ DEFAULT_ZOOM }>
-                <div>
-                  <b>Philadelphia Ethical Society</b><br />
-                  1906 Rittenhouse Square<br />
-                  Philadelphia, PA 19103
-                </div>
-              </MapCmp>
+              <div className="google-map-container">
+                <MapCmp className="google-map" address={ ADDRESS } defaultZoom={ DEFAULT_ZOOM }>
+                  <div>
+                    <b>Philadelphia Ethical Society</b><br />
+                    1906 Rittenhouse Square<br />
+                    Philadelphia, PA 19103
+                  </div>
+                </MapCmp>
+              </div>
             </div>
           </section>
 
