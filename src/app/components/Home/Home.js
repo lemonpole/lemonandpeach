@@ -1,5 +1,6 @@
 import React from 'react';
 import NavCmp from '../Common/Nav';
+import FancyDividerCmp from '../Common/FancyDivider';
 import SplashCmp from './Splash';
 
 class HomeCmp extends React.Component {
@@ -18,11 +19,7 @@ class HomeCmp extends React.Component {
           <h2>Wednesday, May 25th, 2016</h2>
         </div>
 
-        <div id="fancy-divider">
-          <hr />
-          <i className="fa fa-heart fa-lg fa-fw"></i>
-          <hr />
-        </div>
+        <FancyDividerCmp />
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import NavCmp from '../Common/Nav';
+import FancyDividerCmp from '../Common/FancyDivider';
 import MapCmp from './Map';
 
 const ADDRESS = '1906 Rittenhouse Square, Philadelphia, PA 19103';
@@ -31,11 +32,7 @@ class InfoCmp extends React.Component {
           </section>
 
           <section className="row">
-            <div id="fancy-divider" className="col-md-12">
-              <hr />
-              <i className="fa fa-heart fa-lg fa-fw"></i>
-              <hr />
-            </div>
+            <FancyDividerCmp className="col-md-12" />
           </section>
 
           <section className="row">
