@@ -46,7 +46,7 @@ class MapCmp extends React.Component {
           <GoogleMap
             defaultZoom={ this.props.defaultZoom }
             defaultCenter={ this.state.result.geometry.location }
-            defaultOptions={{ disableDefaultUI: true, draggable: false, scrollwheel: false, maxZoom: this.props.defaultZoom }}
+            defaultOptions={{ disableDefaultUI: true, scrollwheel: false, maxZoom: this.props.defaultZoom }}
           >
             <Marker position={ this.state.result.geometry.location } defaultAnimation={ 2 }>
               <InfoWindow>
