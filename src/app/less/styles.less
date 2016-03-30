@@ -208,6 +208,12 @@ nav {
 * Info page
 */
 #info {
+  text-align: center;
+
+  p {
+    font-size: 1.2em;
+  }
+
   h2 {
     margin-top: 0;
   }
@@ -222,7 +228,6 @@ nav {
   .google-map {
     height: 300px;
     border: 1px solid lighten( @color-palered, 20% );
-    text-align: center;
   }
 
   .google-map .fa {
@@ -233,5 +238,15 @@ nav {
 
   section.location h2 {
     margin-top: 20px;
+  }
+
+  section.hotel address {
+    background-color: lighten( @color-brdr-white, 15% );
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid @color-brdr-white;
+    box-shadow: 0 -1px 0 darken( white, 2% ), 0 0 2px fade( black, 12% ), 0 2px 4px fade( black, 24% );
   }
 }

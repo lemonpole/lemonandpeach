@@ -37,11 +37,16 @@ class InfoCmp extends React.Component {
             <FancyDividerCmp className="col-md-12" />
           </section>
 
-          <section className="row">
+          <section className="row hotel">
             <div className="col-md-12">
-              <h2>Parking</h2>
-              <p>Parking will be provided by <b>SO AND SO</b></p>
-              <p>For more information visit their website or call: 215-133-3337.</p>
+              <h2>Accomodations</h2>
+              <p>We have a block of hotel rooms reserved under the name <b>Pinero &amp; Rivera Wedding</b>.</p>
+              <address>
+                <b>Hampton Inn Philadelphia Convention Center</b><br />
+                1301 Race Street, Philadelphia, PA 19107<br />
+                215-665-9100
+              </address>
+              <p>Please be sure to make your reservations by <span className="text-danger">May 3, 2016</span>.</p>
             </div>
           </section>
 
@@ -51,8 +56,9 @@ class InfoCmp extends React.Component {
 
           <section className="row">
             <div className="col-md-12">
-              <h2>Some Other</h2>
-              <p>Info Info Info</p>
+              <h2>Parking</h2>
+              <p>Parking will be provided by <b>SO AND SO</b></p>
+              <p>For more information visit their website or call: 215-133-3337.</p>
             </div>
           </section>
         </div>
