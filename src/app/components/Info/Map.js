@@ -1,7 +1,7 @@
 import React from 'react';
 import { GoogleMapLoader, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
-let geocoder = new google.maps.Geocoder();
+let geocoder = {};
 
 class MapCmp extends React.Component {
   constructor( props ) {
@@ -12,6 +12,7 @@ class MapCmp extends React.Component {
   }
 
   componentDidMount() {
+    geocoder = new google.maps.Geocoder();
     geocoder.geocode({ address: this.props.address }, ( results, status ) => {
       if( status == google.maps.GeocoderStatus.OK ) {
         this.setState({ result: results[ 0 ] });
@@ -45,6 +46,7 @@ class MapCmp extends React.Component {
           <GoogleMap
             defaultZoom={ this.props.defaultZoom }
             defaultCenter={ this.state.result.geometry.location }
+            defaultOptions={{ disableDefaultUI: true, draggable: false, scrollwheel: false, maxZoom: this.props.defaultZoom }}
           >
             <Marker position={ this.state.result.geometry.location } defaultAnimation={ 2 }>
               <InfoWindow>
