@@ -10,9 +10,14 @@ const DEFAULT_ZOOM = 15;
 class InfoCmp extends React.Component {
   constructor( props ) {
     super( props ); 
-  } 
+  }
 
-  render() { 
+  _mapOnClick() {
+    // when the marker is clicked we want to take the user to google maps.
+    console.log( 'clicked!' );
+  }
+
+  render() {
     return (
       <div id="info">
         <NavCmp location={ this.props.location } />
@@ -22,11 +27,12 @@ class InfoCmp extends React.Component {
             <div className="col-md-12">
               <h2>Location</h2>
               <div className="google-map-container">
-                <MapCmp className="google-map" address={ ADDRESS } defaultZoom={ DEFAULT_ZOOM }>
+                <MapCmp className="google-map" address={ ADDRESS } defaultZoom={ DEFAULT_ZOOM } onClick={ this._mapOnClick.bind( this ) }>
                   <div>
                     <b>Philadelphia Ethical Society</b><br />
                     1906 Rittenhouse Square<br />
-                    Philadelphia, PA 19103
+                    Philadelphia, PA 19103<br />
+                    <a onClick={ this._mapOnClick.bind( this ) }>Open in maps</a>
                   </div>
                 </MapCmp>
               </div>

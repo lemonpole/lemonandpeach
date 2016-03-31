@@ -48,7 +48,7 @@ class MapCmp extends React.Component {
             defaultCenter={ this.state.result.geometry.location }
             defaultOptions={{ disableDefaultUI: true, scrollwheel: false, maxZoom: this.props.defaultZoom }}
           >
-            <Marker position={ this.state.result.geometry.location } defaultAnimation={ 2 }>
+            <Marker position={ this.state.result.geometry.location } defaultAnimation={ 2 } onClick={ this.props.onClick }>
               <InfoWindow>
                 { this.props.children } 
               </InfoWindow>
