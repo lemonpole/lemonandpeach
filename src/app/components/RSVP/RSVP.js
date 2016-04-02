@@ -119,12 +119,12 @@ class RSVPCmp extends React.Component {
                 <div className="row">
                   <div className="col-md-6">
                     <button className={ 'btn btn-going btn-lg btn-block ' + ( ( !this.state.formPristine && this.state.isComing == 'going' ) ? 'btn-active' : '' ) } onClick={ this._onClickComing.bind( this, 'going' ) } disabled={ !this.state.formPristine && this.state.isComing == 'not going' }>
-                      The fuck yea!
+                      Gladly accept!
                     </button>
                   </div>
                   <div className="col-md-6">
                     <button className={ 'btn btn-not-going btn-lg btn-block ' + ( ( !this.state.formPristine && this.state.isComing == 'not going' ) ? 'btn-active' : '' ) } onClick={ this._onClickComing.bind( this, 'not going' ) } disabled={ !this.state.formPristine && this.state.isComing == 'going' }>
-                      No, I am a dookiehead!
+                      Sadly decline!
                     </button>
                   </div>
                 </div>
