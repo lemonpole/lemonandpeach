@@ -34,11 +34,11 @@ class RSVPCmp extends React.Component {
   _validateFullname( val ) {
     var stateObj = {};
 
-    stateObj.fullname = val;
     stateObj.fullnamePristine = false;
     stateObj.fullnameValid = ( val.length > 0 );
 
     if( stateObj.fullnameValid ) {
+      stateObj.fullname = val;
       stateObj.formValid = true;
     } else {
       stateObj.formValid = false;
@@ -65,13 +65,7 @@ class RSVPCmp extends React.Component {
 
   _onClickComing( val, evt ) {
     evt.preventDefault();
-    var stateObj = { isComing: val, formPristine: false };
-
-    if( val == 'going' && !this.state.plusOneValid ) {
-      stateObj.formValid = false;
-    }
-
-    this.setState( stateObj );
+    this.setState({ isComing: val, formPristine: false });
   }
 
   _onSubmit( evt ) {
