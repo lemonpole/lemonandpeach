@@ -32,7 +32,7 @@ class InfoCmp extends React.Component {
                     <b>Philadelphia Ethical Society</b><br />
                     1906 Rittenhouse Square<br />
                     Philadelphia, PA 19103<br />
-                    <a onClick={ this._mapOnClick.bind( this ) }>Open in maps</a>
+                    <a href="https://goo.gl/maps/C1m87sZpr5q" target="_blank">Open in maps</a>
                   </div>
                 </MapCmp>
               </div>
@@ -63,8 +63,8 @@ class InfoCmp extends React.Component {
           <section className="row">
             <div className="col-md-12">
               <h2>Parking</h2>
-              <p>Parking will be provided by <b>SO AND SO</b></p>
-              <p>For more information visit their website or call: 215-133-3337.</p>
+              <p>We are currently looking for discounted parking areas around the city.</p>
+              <p>We will update this section when we find out more information. Check back soon!</p>
             </div>
           </section>
         </div>
