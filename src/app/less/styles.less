@@ -78,7 +78,7 @@ nav {
     margin-left: 50%;
   }
 
-  #items-container li:nth-child( 4 ):hover ~ hr {
+  #items-container li:nth-child( 4 ):hover ~ hr, #items-container li.activenav-fund ~ hr {
     margin-left: 75%;
   }
 
@@ -248,5 +248,84 @@ nav {
     padding: 10px;
     border: 1px solid @color-brdr-white;
     box-shadow: 0 -1px 0 darken( white, 2% ), 0 0 2px fade( black, 12% ), 0 2px 4px fade( black, 24% );
+  }
+}
+
+#fund {
+  position: fixed;
+  background: url( 'http://i.imgur.com/rU7xQVn.jpg' ) no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  color: white;
+
+  .fund-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+
+  .inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 4em;
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 2px 5px fadeout( black, 5% );
+    letter-spacing: 0.02em;
+  }
+
+  h1 > small {
+    display: block;
+    margin-top: 10px;
+    color: inherit;
+    font-size: .5em;
+  }
+
+  button {
+    background-color: @color-palegreen;
+    margin-top: 20px;
+    padding: 10px 100px;
+    border: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: darken( @color-palegreen, 40% );
+    transition: .25s;
+  }
+
+  button:hover {
+    background-color: darken( @color-palegreen, 40% );
+    color: @color-palegreen;
+  }
+
+  nav {
+    box-shadow: none;
+    color: white;
+  }
+
+  nav .logo {
+    background-image: url( '../img/logo_white.png' );
+  }
+
+  nav #items-container a {
+    color: white;
+  }
+
+  nav #items-container a:hover {
+    background-color: transparent;
+  }
+
+  nav hr {
+    background-color: white;
+  }
+}
+
+#fund .thankyou {
+  h2 {
+    font-family: 'Lobster', cursive;
+    text-shadow: 0 2px 5px fadeout( black, 5% );
   }
 }

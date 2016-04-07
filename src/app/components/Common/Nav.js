@@ -30,7 +30,9 @@ class NavCmp extends React.Component {
           <li className={ ( this.state.pathname == '/' ) ? 'activenav-home' : '' }><Link to="/">Home</Link></li>
           <li className={ ( this.state.pathname == '/rsvp' ) ? 'activenav-rsvp' : '' }><Link to="/rsvp">RSVP</Link></li>
           <li className={ ( this.state.pathname == '/info' ) ? 'activenav-info' : '' }><Link to="/info">Info</Link></li>
-          <li><Link to="/fund">Honeymoon Fund</Link></li>
+          <li className={ ( this.state.pathname == '/fund' || this.state.pathname == '/fund/thankyou' ) ? 'activenav-fund' : '' }>
+            <Link to="/fund">Honeymoon Fund</Link>
+          </li>
           <li className="last">&nbsp;</li>
           <hr />
         </ul>
