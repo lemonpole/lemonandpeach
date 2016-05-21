@@ -43,16 +43,11 @@ class InfoCmp extends React.Component {
             <FancyDividerCmp className="col-md-12" />
           </section>
 
-          <section className="row hotel">
+          <section className="row">
             <div className="col-md-12">
-              <h2>Accomodations</h2>
-              <p>We have a block of hotel rooms reserved under the name <b>Pinero &amp; Rivera Wedding</b>.</p>
-              <address>
-                <b>Hampton Inn Philadelphia Convention Center</b><br />
-                1301 Race Street, Philadelphia, PA 19107<br />
-                215-665-9100
-              </address>
-              <p>Please be sure to make your reservations by <span className="text-danger">May 3, 2016</span>.</p>
+              <h2>Parking</h2>
+              <p>We are currently looking for discounted parking areas around the city.</p>
+              <p>We will update this section when we find out more information. Check back soon!</p>
             </div>
           </section>
 
@@ -62,9 +57,14 @@ class InfoCmp extends React.Component {
 
           <section className="row">
             <div className="col-md-12">
-              <h2>Parking</h2>
-              <p>We are currently looking for discounted parking areas around the city.</p>
-              <p>We will update this section when we find out more information. Check back soon!</p>
+              <h2>Wedding Pictures</h2>
+              <p>You can upload your pictures of the wedding using the Wedpics App.</p>
+              <p>
+                <a className="btn btn-danger" href="https://play.google.com/store/apps/details?id=com.dejami.WedPics">Download for Android</a>&nbsp;
+                <a className="btn btn-danger" href="https://itunes.apple.com/us/app/wedpics-wedding-photo-app/id549402355">Download for IOS</a>
+              </p>
+              <p>After installing the app search for our wedding by ID: <code>LemonandPeach</code>.</p>
+              <p>Once you've found us you can start posting pictures and videos right away!</p>
             </div>
           </section>
         </div>
