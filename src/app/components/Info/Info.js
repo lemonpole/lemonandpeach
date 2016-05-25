@@ -43,11 +43,15 @@ class InfoCmp extends React.Component {
             <FancyDividerCmp className="col-md-12" />
           </section>
 
-          <section className="row">
+          <section className="row parking">
             <div className="col-md-12">
               <h2>Parking</h2>
-              <p>We are currently looking for discounted parking areas around the city.</p>
-              <p>We will update this section when we find out more information. Check back soon!</p>
+              <p>We will be giving out discounted parking vouchers.</p>
+              <address>
+                <b><a href="https://goo.gl/maps/ED2RUHxJewN2" target="_blank">Open in maps</a></b><br />
+                1845 Walnut Garage, Philadelphia, PA 19103<br />
+                (267) 765-3665
+              </address>
             </div>
           </section>
 
